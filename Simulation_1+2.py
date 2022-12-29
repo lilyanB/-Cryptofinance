@@ -71,7 +71,7 @@ def attacks(cycles, q):
         alice_blocks.append((block, h))
     return alice_blocks
 
-def get_amount():
+def goodCycles():
     while True:
         amount = input("What is the number of attacks you will make ? ")
         try:
@@ -87,7 +87,7 @@ def get_amount():
 def main():
 
     attackerHashrate = float(input("What is the relative hashrate of the attacker ? (0<q<1)"))
-    cycles = get_amount()
+    cycles = goodCycles()
 
     x = (attackerHashrate**2)*(4-attackerHashrate)
     y = 1+attackerHashrate+attackerHashrate**3
